@@ -75,20 +75,20 @@ public class WeatherBit {
 
             weatherDescription = forecast.getWeatherDetails().get("description").toLowerCase();
 
-            if (weatherDescription.contains("snow") || weatherDescription.contains("rain")){
-
+            if (weatherDescription.contains("snow") || weatherDescription.contains("rain"))
+            {
                 flag = true;
             }
 
-            if (forecast.getDatetime().equals(nextDate.toString()) && flag == true) {
-
+            if (forecast.getDatetime().equals(nextDate.toString()) && flag == true)
+            {
                 flag = false;
                 holiday = nextDate; // to have last thursday date in case of no thursday without rain/snow
                 nextDate = nextDate.plusDays(7);
 
             }
-            else if (forecast.getDatetime().equals(nextDate.toString()) && flag == false){
-
+            else if (forecast.getDatetime().equals(nextDate.toString()) && flag == false)
+            {
                 Assert.assertTrue(true,"Until " + nextDate.toString() +" for a week no rain or snow is observed");
                 holiday = nextDate;
                 return;
