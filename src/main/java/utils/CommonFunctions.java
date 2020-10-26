@@ -6,10 +6,10 @@ import java.time.temporal.TemporalAdjusters;
 
 public class CommonFunctions {
 
-    public static LocalDate calculateNextDay(String day) {
+    public static LocalDate calculateNextDate(String dayOfWeek) {
         LocalDate d = LocalDate.now();
 
-        switch (day.toUpperCase()) {
+        switch (dayOfWeek.toUpperCase()) {
             case "MONDAY":
                 return d.with(TemporalAdjusters.next(DayOfWeek.MONDAY));
             case "TUESDAY":

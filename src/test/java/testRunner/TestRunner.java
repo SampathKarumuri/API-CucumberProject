@@ -14,7 +14,6 @@ import java.io.File;
         features = "src/test/resources/features",
         glue = {"stepDefinitions"},
         plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
-        //"html:target/cucumber-reports"},
         monochrome = true
 )
 public class TestRunner {
